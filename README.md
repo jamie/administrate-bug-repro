@@ -1,6 +1,6 @@
 # administrate-bug-repro
 
-Minimal reproduction case for a bug in Administrate.
+Minimal reproduction case for [a bug report](https://github.com/thoughtbot/administrate/issues/2088) in Administrate.
 
 # Reproduction Notes
 
