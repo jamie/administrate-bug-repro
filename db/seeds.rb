@@ -8,7 +8,7 @@
 
 user = User.find_or_create_by(name: 'first guy')
 
-max_id = Message.last.id
+max_id = Message.last&.id || 0
 Message.insert_all((0...10000).map do |i|
   {id: max_id+i+1, user_id: user.id, body: "Message #{max_id+i+1}"}
 end)
