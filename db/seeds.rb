@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+user = User.find_or_create_by(name: 'first guy')
+
+max_id = Message.last.id
+Message.insert_all((0...10000).map do |i|
+  {id: max_id+i+1, user_id: user.id, body: "Message #{max_id+i+1}"}
+end)
